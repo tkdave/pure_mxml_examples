@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Jump Command -->
+
+<TurtleInstructionSet xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns="commands.*">
+
+	
+	<SetRotation val="-85" />
+	
+	<Forward distance="100" tweenFactor=".3" ease="out" />
+	
+	<Turn angle="170" tweenFactor=".3" />
+	
+	<Forward distance="100" tweenFactor=".5" ease="in"/>
+	
+	<Turn angle="120" tweenFactor=".5"/>
+	<Turn angle="-30" tweenFactor=".5"/>
+	
+	
+</TurtleInstructionSet>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Jump Command Command -->
+
+<TurtleInstructionSet xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns="commands.*">
+
+	<fx:Script>
+		<![CDATA[
+			
+			public var height:Number=100;
+			
+		]]>
+	</fx:Script>
+	
+	<Turn angle="90" tweenFactor=".8" />
+	
+	<Forward distance="100" />
+	
+	<Turn angle="-90" />
+	
+	<Forward distance="60" />
+	
+	<Turn angle="90" />
+	
+	<Forward distance="100" />
+	
+	<Turn angle="-90" />
+		
+	<Forward distance="60" />
+	
+	<Turn angle="90" />
+	
+	<Forward distance="100" />
+	
+	<Turn angle="-45" />
+		
+	<Turn angle="1080" tweenFactor=".05" delay="2000" />
+	
+</TurtleInstructionSet>
