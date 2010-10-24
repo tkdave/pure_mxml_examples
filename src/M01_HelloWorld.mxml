@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
   	MXML Demo 1 - Hello World
 
@@ -27,31 +26,31 @@
 	
 	@author David Knape
 -->
-	
+
+
 <fl:Sprite 	xmlns:fx="http://ns.adobe.com/mxml/2009" 
 			xmlns:t="flash.text.*" 
-			xmlns:fl="flash.display.*" 
-			addedToStage="addChild( textField )">
-			
+			xmlns:fl="flash.display.*"
+           	addedToStage="addChild( textField )">
+	
+	<fx:Metadata>
+		[SWF(backgroundColor="0x253C4B",frameRate="31")]	
+	</fx:Metadata>
+	
 	<fx:Declarations>
 	
-		<!-- create a text field -->
 		<t:TextField id="textField" x="20" y="20" autoSize="left" multiline="true" condenseWhite="true">
-		
-			<t:defaultTextFormat> 
-				<t:TextFormat font="Georgia" color="0x000088" size="30" /> 			
+
+			<t:defaultTextFormat>
+				<t:TextFormat font="Georgia" color="0xffffff" size="30"/>
 			</t:defaultTextFormat>
-			
+
 			<t:htmlText>
 				<![CDATA[
 					<b>Hello, World.</b>
-					<br />
-					(only 4 kB)
 				]]>
 			</t:htmlText>
-			
+
 		</t:TextField>
-		
 	</fx:Declarations>
-			
 </fl:Sprite>

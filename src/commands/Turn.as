@@ -13,10 +13,15 @@ package commands
 	{
 		
 		public var angle:Number = 90;
-
+		
 		override public function execute( event:CommandEvent=null ):void
 		{
-			FTween.ease( turtle, 'rotation', turtle.rotation + angle, tweenFactor, { delay: delay, onComplete: notifyComplete});
+			
+			//turtle.rotation += angle;
+			
+			//super.execute( event );
+			
+			FTween.smooth( turtle, 'rotation', turtle.rotation + angle, tweenFactor, 90, { delay: delay, onComplete: notifyComplete});
 		}
 
 	}

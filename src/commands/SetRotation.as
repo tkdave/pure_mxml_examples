@@ -11,12 +11,12 @@ package commands
 	 */
 	public class SetRotation extends TurtleInstruction
 	{
-		public var val:Number = 0;
+		public var value:Number = 0;
 		
 		override public function execute( event:CommandEvent=null ):void
 		{
 			FTween.stopTweening( turtle, 'rotation' );
-			turtle.rotation = val;
+			turtle.rotation = value;
 			
 			super.execute( event );
 		}

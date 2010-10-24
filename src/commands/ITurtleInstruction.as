@@ -1,18 +1,18 @@
 package commands
 {
 
+	import vo.TurtleModel;
+
 	import com.bumpslide.command.ICommand;
 
-	import flash.display.Sprite;
-
 	/**
-	 * ITurtleInstruction
+	 * Command that gets applied to a turtle
 	 *
 	 * @author David Knape
 	 */
 	public interface ITurtleInstruction extends ICommand
 	{
-		function set turtle( t:Sprite ):void;
-		function get turtle() : Sprite;
+		function set turtle( t:TurtleModel ):void;
+		function get turtle() : TurtleModel;
 	}
 }

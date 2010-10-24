@@ -14,7 +14,7 @@ package commands
 				
 		public var distance:Number = 20;
 
-		public var speed:Number = 50;
+		public var speed:Number = 100;
 
 		private var _pending:int = 0;
 		
@@ -48,8 +48,6 @@ package commands
 					FTween.smooth( turtle, 'y', ty, tweenFactor, speed, { delay:delay, onComplete:handleTweenComplete } );		
 			}
 			
-			FTween.smooth( turtle, 'x', tx, tweenFactor, speed, { delay:delay, onComplete:handleTweenComplete } );
-			FTween.smooth( turtle, 'y', ty, tweenFactor, speed, { delay:delay, onComplete:handleTweenComplete } );
 		}
 	
 		private function handleTweenComplete():void {
