@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ZigZag Command -->
+
+<commands:TurtleInstructionSet xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:commands="turtle.commands.*">
+
+	<commands:SetRotation value="45" />
+	
+	<commands:Repeat times="3">
+		<commands:Forward distance="50" />
+		<commands:Turn angle="-90" />
+		<commands:Forward distance="50" />
+		<commands:Turn angle="90" />	
+	</commands:Repeat>
+	
+	<commands:Turn angle="-45" />
+	
+</commands:TurtleInstructionSet>

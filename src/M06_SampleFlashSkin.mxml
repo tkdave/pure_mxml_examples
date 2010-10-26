@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:Application xmlns:fx="http://ns.adobe.com/mxml/2009"  xmlns:ui="com.bumpslide.ui.*">
+
+
+<fx:Script>
+		<![CDATA[
+
+			import sample.ButtonBackgroundSkin;
+			import sample.MyLabelFont;
+			import sample.TextInputSkin;
+			
+			import com.bumpslide.ui.Button;
+			import com.bumpslide.ui.skin.defaults.Style;
+
+			
+			override protected function addChildren():void
+			{
+				Button.DefaultSkinClass = ButtonBackgroundSkin;
+				
+				var f:Font = new MyLabelFont();
+				
+				Style.LABEL_TEXT_FORMAT = new TextFormat( f.fontName, 12, 0x334455 );
+				Style.LABEL_FONT_EMBEDDED = true;
+				
+				
+				
+				super.addChildren();
+			}
+		
+	]]>
+</fx:Script>
+
+
+	<ui:VBox x="100" y="100">
+		
+		<ui:TextInput id="input" skinClass="{sample.TextInputSkin}" height="30" width="300"/>
+		
+		<ui:Button label="{input.text}" height="30" width="200" />
+		
+	</ui:VBox>
+	
+	
+
+
+
+</ui:Application>

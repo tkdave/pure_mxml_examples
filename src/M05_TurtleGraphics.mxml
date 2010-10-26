@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+  	MXML Demo 5 - MXML as Action Sequencer 
+		
+	@author David Knape
+
+-->
+
+<ui:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:ui="com.bumpslide.ui.*"
+                xmlns:c="commands.*" xmlns:asset="*" click="handleClick( event )"
+                creationComplete="initCommands()" xmlns:tui="turtle.ui.*">
+	<fx:Script>
+		<![CDATA[
+
+			import turtle.commands.*;
+			import turtle.commands.sketches.*;
+			import turtle.core.ITurtle;
+			import turtle.core.ITurtleAware;
+			import turtle.core.TurtleModel;
+
+			import com.bumpslide.util.ObjectUtil;
+
+			private var turtle:ITurtle = new TurtleModel();
+
+			private var commandMap:Dictionary = new Dictionary();
+
+			
+			override protected function init():void
+			{
+				super.init();
+				addEventListener( Event.ADDED, onItemAdded );
+			}
+			private function onItemAdded( event:Event ):void
+			{
+				if (event.target is ITurtleAware) {
+					(event.target as ITurtleAware).turtle = turtle;
+				}
+			}
+
+
+			private function initCommands():void
+			{
+				commandMap['pen_up'] = PenUp;
+				commandMap['pen_down'] = PenDown;
+				commandMap['forward'] = [ Forward, { distance:50} ];
+				commandMap['back'] = [ Forward, { distance:-10} ];
+				commandMap['left'] = [ Turn, { angle:-15 } ];
+				commandMap['right'] = [ Turn, { angle:15 } ];
+				commandMap['clear'] = Reset;
+				commandMap['zigzag'] = ZigZag;
+				commandMap['square'] = Square;
+				commandMap['circle'] = Circle;
+				commandMap['jump'] = Jump;
+			}
+
+
+			private function handleClick( event:MouseEvent ):void
+			{
+				try {
+					var c:* = commandMap[ event.target.name ];
+					if (c is Array) {
+						runCommand( c[0], c[1] );
+					} else if ( c is Class) {
+						runCommand( c );
+					}
+				} catch (e:Error) {
+					trace(e);
+				}
+			}
+
+
+			private function runCommand( commandClass:Class, params:Object = null ):void
+			{
+				var c:ITurtleInstruction = ObjectUtil.create( commandClass, params );
+				c.turtle = turtle;
+				c.execute();
+			}
+		]]>
+	</fx:Script>
+
+	<tui:TurtleCanvas />
+	<tui:TurtleControls/>
+
+
+</ui:Application>

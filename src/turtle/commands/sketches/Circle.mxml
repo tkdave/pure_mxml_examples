@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Square Command -->
+
+<commands:TurtleInstructionSet xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:commands="turtle.commands.*">
+
+	<commands:SetRotation value="0" />
+	
+	<commands:Repeat times="120">
+		<commands:Forward distance="3" tweenFactor="1"/>
+		<commands:Turn angle="3" tweenFactor=".8" />
+	</commands:Repeat>
+	
+	
+</commands:TurtleInstructionSet>

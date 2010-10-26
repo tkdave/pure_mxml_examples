@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Jump Command -->
+
+<commands:TurtleInstructionSet xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:commands="turtle.commands.*">
+
+	
+	<commands:SetRotation value="-85" />
+	
+	<commands:Forward distance="100" tweenFactor=".3" ease="out" />
+	
+	<commands:Turn angle="170" tweenFactor=".3" />
+	
+	<commands:Forward distance="100" tweenFactor=".5" ease="in"/>
+	
+	<commands:Turn angle="120" tweenFactor=".5"/>
+	<commands:Turn angle="-30" tweenFactor=".5"/>
+	
+	
+</commands:TurtleInstructionSet>

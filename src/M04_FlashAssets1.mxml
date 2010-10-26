@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  	MXML Demo 4 - Use Flash Assets from MXML
+	@author David Knape
+-->
+	
+<util:MXMLSprite xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:util="util.*" xmlns="*" enterFrame="onEnterFrame()">
+	<fx:Script>
+		<![CDATA[
+
+			private function onEnterFrame():void
+			{
+				return;
+				// center the circles
+				redCircle.x = blueCircle.x = stage.stageWidth / 2;
+				redCircle.y = blueCircle.y = stage.stageHeight / 2;
+
+				// change projection based on mouse location
+				root.transform.perspectiveProjection.projectionCenter = new Point( mouseX, mouseY );
+			}
+		]]>
+	</fx:Script>
+
+	<BlueCircle id="blueCircle" z="100"/>
+
+	<RedCircle id="redCircle" width="60" height="60" z="200">
+
+		<BlueCircle z="200"/>
+
+	</RedCircle>
+
+</util:MXMLSprite>

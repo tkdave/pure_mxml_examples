@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:Component xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:ui="com.bumpslide.ui.*" xmlns:asset="*">
+
+	<ui:VBox x="20" y="20" layout="vertical">
+
+		<ui:HBox>
+			<ui:Button name="left" label="Left" />
+			<ui:Button name="right" label="Right"/>
+			<ui:Button name="forward" label="Forward"/>
+			<ui:Button name="back" label="Back"/>
+			<ui:Button name="clear" label="Clear"/>
+		</ui:HBox>
+
+		<ui:HBox>
+			<ui:Button name="pen_down" label="Pen Down"/>
+			<ui:Button name="pen_up" label="Pen Up"/>
+			<ui:Button name="square" label="Square"/>
+			<ui:Button name="circle" label="Circle"/>\
+			<ui:Button name="jump" label="Jump"/>
+			<ui:Button name="zigzag" label="Zig Zag"/>
+		</ui:HBox>
+
+	</ui:VBox>
+
+</ui:Component>
