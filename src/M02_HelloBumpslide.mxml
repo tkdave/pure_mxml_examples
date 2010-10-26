@@ -17,27 +17,32 @@
 	xmlns:fx="http://ns.adobe.com/mxml/2009" 
 	xmlns:ui="com.bumpslide.ui.*">
 			
+	<fx:Metadata>
+		[SWF(backgroundColor=0x333333,width=800,height=500)]
+	</fx:Metadata>
 	<ui:Box 
 		x="50" y="50" cornerRadius="12" 
-		width="400" height="250" 
+		width="{width-100}" height="300" 
 		backgroundColor="0xffffff" borderColor="0xdddddd" 
 		borderPixelHinting="true" borderWidth="1">
 	
 		<ui:Box 
 			x="6" y="6" cornerRadius="6" 
-			width="388" height="50" 
+			width="{width-112}" height="50" 
 			backgroundColor="0x112255" borderPixelHinting="true">
 			
 			<ui:Label 
-				text="Hello. My name is..." 
-				x="10" y="6" width="400" 
+				text="Hello"
+				maxLines="1" 
+				x="10" y="6" width="{width-150}" 
 				textFormat="{new TextFormat('Arial', 25, 0xffffff, true)}" />					
 		</ui:Box>
 				
-		<ui:Label 
-			text="Bumpslide" 
+		<ui:Label
+			text="Welcome to MXML with the Bumpslide Library" 
 			x="20" y="80" 
-			width="400"
+			width="{width-150}"
+			maxLines="3"
 			textFormat="{new TextFormat('Georgia', 60, 0x000000)}" />
 			
 	</ui:Box>
